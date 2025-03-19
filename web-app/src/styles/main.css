@@ -1,12 +1,11 @@
 /*Colour Palette*/
 
 :root {
-    --dark: #000000;
-    --light: #FFFFFF;
-    --nocturnal-blue: #3A1C71;
-    --cool-gray:#B6BCC6;
-    --graphite-gray:#3C3C3C;
-    --midnight--navy: #2C3E50;
+  --primary: #2B2D42;   /* Deep Grayish Blue - Good for backgrounds */
+  --secondary: #8D99AE; /* Muted Blue - Good for subheadings, accents */
+  --accent: #EF233C;    /* Vibrant Red - Use for highlights/buttons */
+  --light: #EDF2F4;     /* Soft White - Ideal for text on dark bg */
+  --dark: #1D1E24;      /* Almost Black - Great for high contrast */
   
   }
 
@@ -19,6 +18,8 @@
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 2.652rem;
     --font-size-4xl: 4rem;
+      scroll-behavior: smooth;
+
   }
   
   * {
@@ -28,7 +29,9 @@
     
    
     body{
-      font-family:sans-serif;
+      position: relative;
+      margin: 0;
+      padding: 0;
       display:flex;
       height: 100vh;
       justify-content: center;
@@ -47,6 +50,7 @@
       width:100%;
       display:flex;
       justify-content:space-between;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links{
@@ -86,63 +90,160 @@
     .bottom-navbar{
       background-color:var(--light);
       position:fixed;
-      overflow: hidden;
-      
+      box-shadow: 0;
       bottom:0;
       left:0;
       width:100%;
       display:flex;
       justify-content:space-between;
       align-items: center;
+    
     }
 
     .bottom-nav-links{
       display:flex;
       list-style:none;
+      margin:0;
+      padding: 0;
       
     }
 
     .bottom-nav-links a{
       color:var(--dark);
-      padding:8px 12px;    
+      padding:8px 12px; 
+      text-decoration: none;   
     }
     
 
-
+.section-one{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light);
+  padding: 20px;
+}
     
-    .section-one{
-      max-width:900px;
+    .welcome-section{
+      flex:1;
+      max-width:100%;
       font-family: 'Inter', Arial;
-      font-size: 3em;
-      font-weight: 600;
-      color: var(--nocturnal-blue);
+      font-size: 2em;
+      font-weight: 300;
+      color: var(--dark);
       text-align: left;
+    }
+
+    .welcome-section h1 h2{
+      font-size: var(--font-size-2xl) ;
+      
+      color: var(--dark);
+      text-align: left;
+    }
+    .welcome-section p{
+      font-size: var(--font-size-2xl);
+      color: var(--dark);
+      text-align: left;
+    }
+
+    .hero-btns{
+      display: flex;
+      gap:15px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: var(--font-size-lg);
+      background-color: var(--accent);
+      color: var(--light);
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s ease;
+  }
+
+   .cv-btn{
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: var(--font-size-lg);
+    background-color: var(--accent);
+    color: var(--light);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+   }
+  
+  .hero-btn:hover {
+      background-color: var(--secondary);
+  }
+    
+    .profile-photo{
+      display: flex;
+      flex:1;
+      max-width:50%;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+    }
+    .profile-photo img{
+      
+      width:100%; 
+      height: auto;
+      border-radius: 5%;  
+      box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+      
+      
+    }
+
+    .profile-photo figcaption{
+      font-family: 'Inter', Arial;
+      font-size: 1em;
+      font-weight: 300;
+      margin-top: 5px;
+      padding: 5px;
+      
+      background: rgba(255, 255, 255, 0.7);
+      text-align: center;
     }
   
     .highlight {
       color: var(--cool-gray);
       text-shadow: 
-    2px 2px 1px var(--midnight--navy), 
-    2px -1px 1px var(--midnight--navy), 
-    -1px 1px 1px var(--midnight--navy), 
-    -1px -1px 1px var(--midnight--navy), 
+    2px 2px 1px var(--secondary), 
+    2px -1px 1px var(--secondary), 
+    -1px 1px 1px var(--secondary), 
+    -1px -1px 1px var(--secondary), 
     }
     
     .highlight:hover {
-      color: var(--midnight--navy);
+      color: var(--secondary);
       text-shadow:none;
     }
     
     .highlight.c1:hover {
-      background-color: var(--graphite-gray);
+      background-color: var(--secondary);
     }
     .highlight.c2:hover {
-      background-color: var(--midnight--navy);
+      background-color: var(--secondary);
     }
     .highlight.c3:hover {
-      background-color: var(--nocturnal-blue);
+      background-color: var(--secondary);
     }
+    @media (max-width: 768px) {
+      .section-one {
+        flex-direction: column;
+        text-align: center;
+      }
     
+      .welcome-section {
+        max-width: 100%; /* Makes it responsive */
+        font-size: 2em; /* Adjust font size for mobile */
+      }
+    
+      .profile-photo {
+        margin-top: 20px; /* Adds spacing */
+      }
+    }
   
     /*
     .section-two{
