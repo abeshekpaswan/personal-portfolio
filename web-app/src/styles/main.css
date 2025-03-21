@@ -1,0 +1,258 @@
+/*Colour Palette*/
+
+:root {
+  --primary: #e9e3da;   /* Soft Beige - Good for backgrounds */
+  --secondary: #4a3f35; /* Deep Brown - Good for subheadings, accents */
+  --accent: #e13827;    /* Vibrant Red - Use for highlights/buttons */
+  --light: #bfa88d ;     /* Warm Taupe - Ideal for text on dark bg */
+  --dark: #333;      /* Deep Brown - Great for high contrast */
+  
+  }
+
+  html {
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.3125rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2.652rem;
+    --font-size-4xl: 4rem;
+      scroll-behavior: smooth;
+
+  }
+  
+  * {
+      box-sizing: border-box;
+    
+    }
+    
+   
+    body{
+      background-color: var(--primary);
+      position: relative;
+      margin: 0;
+      padding: 0;
+      display:flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    
+
+    #navbar{
+      
+      position:fixed;
+      background-color: var(--primary);
+      height:60px;
+      top:0;
+      left:0;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+
+
+    section {
+      padding-top: 60px;
+    }
+
+    .nav-links{
+      
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    .nav-links a{
+      right: 10px;
+      font-family: 'Inter', Arial;
+      font-weight: bold;
+      color: var(--accent);
+      text-decoration:none;
+      padding:8px 12px;
+      
+    }
+
+
+    .logo {
+      max-height: 100%;
+      width:auto;
+      padding:10px;
+      transform: scale(1.5);
+
+    }
+  
+    .nav-links a:hover{
+      background-color: var(--light);
+      color: var(--secondary);
+      border-radius: 5px; 
+    }
+
+
+    .bottom-navbar{
+      position:fixed;
+      box-shadow: 0;
+      bottom:10px;
+      left:0;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items: center;
+    
+    }
+
+    .bottom-nav-links{
+      display:flex;
+      list-style:none;
+      margin:0;
+      padding: 0;
+      
+    }
+
+    .bottom-nav-links a{
+      
+      padding:8px 12px; 
+      text-decoration: none;   
+    }
+    
+
+.section-one{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+    
+    .welcome-section{
+      flex:1;
+      max-width:100%;
+      font-family: 'Inter', Arial;
+      font-size: 2em;
+      font-weight: 300;
+      
+      text-align: left;
+    }
+
+    .welcome-section h1 h2{
+      font-size: var(--font-size-2xl) ;
+      
+      
+      text-align: left;
+    }
+    .welcome-section p{
+      font-size: var(--font-size-2xl);
+      
+      text-align: left;
+    }
+
+    .hero-btns{
+      display: flex;
+      gap:15px;
+    }
+
+    .hero-btn, .cv-btn{
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--accent);
+      color: var(--light);
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s ease;
+  }
+  .hero-btn span, .cv-btn span {
+    font-size: 0.8em; 
+    font-weight: bold; 
+    color:black; 
+  }
+
+
+  .hero-btn:hover, .cv-btn:hover{
+    background-color: var(--secondary);
+  }
+  
+  .highlight {
+      color: var(--cool-gray);
+      text-shadow: 
+    2px 2px 1px var(--secondary), 
+    2px -1px 1px var(--secondary), 
+    -1px 1px 1px var(--secondary), 
+    -1px -1px 1px var(--secondary), 
+    }
+    
+    .highlight:hover {
+      color: var(--secondary);
+      text-shadow:none;
+    }
+    
+    .highlight.c1:hover {
+      background-color: var(--secondary);
+    }
+    .highlight.c2:hover {
+      background-color: var(--secondary);
+    }
+    .highlight.c3:hover {
+      background-color: var(--secondary);
+    }
+    @media (max-width: 768px) {
+      .section-one {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .welcome-section {
+        max-width: 100%; /* Makes it responsive */
+        font-size: 2em; /* Adjust font size for mobile */
+      }
+    
+      .profile-photo {
+        margin-top: 20px; /* Adds spacing */
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+    /*
+    .section-two{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:grey;
+      background-color:beige;
+      width:100%;
+      height:100vh;
+      
+      border: 1px solid black;
+      text-align:center;
+      
+      padding:50px 0px;
+      margin:60px 0px;
+    }
+    
+    .section-three{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:grey;
+      background-color:beige;
+      width:100%;
+      height:100vh;
+      
+      border: 1px solid black;
+      text-align:center;
+    
+     padding:50px 0px;
+      margin:60px 0px;
+    }
+    
+  */
+    
+    
+    
